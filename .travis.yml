@@ -13,6 +13,9 @@ language: c
 cache: ccache
 compiler:
   - gcc
+arch:
+  - amd64
+  - arm64
 git:
     submodules: true
 addons:
