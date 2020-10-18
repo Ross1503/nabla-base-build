@@ -33,9 +33,9 @@ before_script:
   - export CC=gcc-6
   - export CXX=g++-6
   - if [ `uname -m` == 'aarch64' ]; then
-      export MACHINE=aarch64
+      export MACHINE=aarch64;
     else
-      export MACHINE=x86_64
+      export MACHINE=x86_64;
     fi
 
 env:
