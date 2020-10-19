@@ -10,7 +10,7 @@ setup:
 	sudo bash setup-tests.sh
 
 test_curl: test_curl.c
-	source $(RUMPRUN)/obj/config-PATH.sh &&	x86_64-rumprun-netbsd-gcc -g -o $@ $<
+	source $(RUMPRUN)/obj/config-PATH.sh &&	aarch64-rumprun-netbsd-gcc -g -o $@ $<
 
 test_curl.nabla: test_curl
 	source $(RUMPRUN)/obj/config-PATH.sh &&	rumprun-bake solo5_spt $@ $<
