@@ -4,7 +4,7 @@ goapp.a: $(wildcard *.go)
 	go build -buildmode=c-archive -v -a -x 
 
 goapp.pseudo: goapp.a
-	RUMPRUN_STUBLINK=succeed x86_64-rumprun-netbsd-gcc -g -o goapp.pseudo _gorump_main.c goapp.a
+	RUMPRUN_STUBLINK=succeed aarch64-rumprun-netbsd-gcc -g -o goapp.pseudo _gorump_main.c goapp.a
 
 goapp.spt: goapp.pseudo
 	rumprun-bake solo5_spt goapp.spt goapp.pseudo
