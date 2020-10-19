@@ -29,7 +29,7 @@ COPY _gorump_main.c /goapp
 COPY Makefile.goapp /goapp
 
 ENV PATH="${host_rumproot}/rumprun-solo5/bin:${PATH}"
-ENV CC="x86_64-rumprun-netbsd-gcc" 
+ENV CC="aarch64-rumprun-netbsd-gcc" 
 ENV GOROOT="/gorump"
 ENV GOPATH="/gopath"
 ENV GOTOOLDIR="/gorump/pkg/tool/linux_amd64"
