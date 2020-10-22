@@ -36,7 +36,7 @@ Makefile \
 gobootstrap: FORCE
 	rm -rf $(GOBOOTSTRAP)
 	mkdir $(GOBOOTSTRAP)
-	curl -L https://storage.googleapis.com/golang/go1.6.2.linux-amd64.tar.gz | tar xz -C $(GOBOOTSTRAP) --strip-components=1 
+	curl -L https://storage.googleapis.com/golang/go1.10.1.linux-arm64.tar.gz | tar xz -C $(GOBOOTSTRAP) --strip-components=1 
 
 .PHONY: gorump
 gorump: gorump_stamp
