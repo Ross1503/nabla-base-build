@@ -44,6 +44,7 @@ env:
 script:
   - export CC=gcc-6
   - export CXX=g++-6
+  - export RUMPRUN_TOOLCHAIN_TUPLE=aarch64-rumprun-netbsd
   - (cd rumprun && NOGCCERROR=1 ./build-rr.sh -o obj -j16 -qq ${PLATFORM})
   - bash travis_wait.sh 60 make --quiet -C go-base gorump
   - bash travis_wait.sh 60 make --quiet -C nginx-base
